@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자 웹 이력서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Kim Dev</h1>
+            <ul class="hidden md:flex gap-8">
+                <li><a href="#about" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">About</a></li>
+                <li><a href="#experience" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Experience</a></li>
+                <li><a href="#projects" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Projects</a></li>
+                <li><a href="#skills" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Skills</a></li>
+                <li><a href="#contact" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" class="md:hidden text-slate-400 hover:text-orange-400 transition-colors duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 py-4 px-6 flex flex-col gap-4">
+            <li><a href="#about" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">About</a></li>
+            <li><a href="#experience" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Experience</a></li>
+            <li><a href="#projects" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Projects</a></li>
+            <li><a href="#skills" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Skills</a></li>
+            <li><a href="#contact" class="text-slate-400 hover:text-orange-400 transition-colors duration-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <p class="text-orange-400 font-semibold text-lg mb-2">안녕하세요 👋</p>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+                        <span class="text-white">I'm </span>
+                        <span class="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Kim Dev</span>
+                    </h2>
+                    <p class="text-2xl text-slate-300 mb-2 font-semibold">Full-Stack Developer</p>
+                    <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                        사용자 중심의 혁신적인 웹 애플리케이션을 설계하고 구축합니다.
+                    </p>
+                    <div class="flex gap-4">
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                            프로젝트 보기
+                        </button>
+                        <button class="border-2 border-orange-500 text-orange-400 hover:bg-orange-500/10 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                            연락하기
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Side - Profile Image -->
+                <div class="hidden md:flex justify-center">
+                    <div class="relative w-80 h-80">
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full opacity-20 blur-2xl"></div>
+                        <div class="absolute inset-6 border-2 border-orange-400/30 rounded-full"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Profile" class="w-full h-full rounded-full object-cover border-4 border-slate-800">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-20">
+        <!-- About Section -->
+        <section id="about" class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-16 bg-gradient-to-r from-orange-400 to-orange-600 rounded"></div>
+                <h3 class="text-4xl font-bold text-white">About Me</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:bg-slate-800/70 transition-colors duration-300">
+                    <div class="text-4xl font-bold text-orange-400 mb-2">120+</div>
+                    <p class="text-slate-400">Projects Completed</p>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:bg-slate-800/70 transition-colors duration-300">
+                    <div class="text-4xl font-bold text-orange-400 mb-2">95%</div>
+                    <p class="text-slate-400">Client Satisfaction</p>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:bg-slate-800/70 transition-colors duration-300">
+                    <div class="text-4xl font-bold text-orange-400 mb-2">10+</div>
+                    <p class="text-slate-400">Years Experience</p>
+                </div>
+            </div>
+            <p class="text-lg text-slate-300 leading-relaxed">
+                3년 경력의 웹 개발자입니다. HTML, CSS, JavaScript, React 등을 활용하여 사용자 경험을 고려한 웹 애플리케이션을 개발해왔습니다.
+                새로운 기술 학습을 즐기고, 팀과 협력하여 문제를 해결하는 것을 좋아합니다.
+            </p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-16 bg-gradient-to-r from-orange-400 to-orange-600 rounded"></div>
+                <h3 class="text-4xl font-bold text-white">Experience</h3>
+            </div>
+            <div class="space-y-6">
+                <!-- Experience 1 -->
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-lg hover:border-orange-400/30 transition-all duration-300 border-l-4 border-l-orange-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold text-white">Senior Developer</h4>
+                        <span class="text-sm text-slate-400 bg-slate-700/50 px-3 py-1 rounded-full">2023 - Present</span>
+                    </div>
+                    <p class="text-orange-400 font-semibold mb-2">ABC Company</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        React 기반 대시보드 개발 및 팀 리드 역할 수행. 성능 최적화로 페이지 로딩 시간 40% 단축.
+                    </p>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-lg hover:border-orange-400/30 transition-all duration-300 border-l-4 border-l-orange-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold text-white">Frontend Developer</h4>
+                        <span class="text-sm text-slate-400 bg-slate-700/50 px-3 py-1 rounded-full">2021 - 2023</span>
+                    </div>
+                    <p class="text-orange-400 font-semibold mb-2">XYZ Corp</p>
+                    <p class="text-slate-300 leading-relaxed">
+                        웹 애플리케이션의 UI/UX 개선 담당. 반응형 디자인 구현으로 모바일 사용성 개선.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-16 bg-gradient-to-r from-orange-400 to-orange-600 rounded"></div>
+                <h3 class="text-4xl font-bold text-white">Projects</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden hover:border-orange-400/50 hover:shadow-lg hover:shadow-orange-400/10 transition-all duration-300 group">
+                    <div class="relative h-40 overflow-hidden bg-slate-700">
+                        <img src="https://picsum.photos/seed/ecommerce/600/240" alt="E-Commerce Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">E-Commerce Platform</h4>
+                        <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                            React와 Node.js로 구현한 전자상거래 플랫폼. 결제 시스템 통합 및 관리자 대시보드 개발.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-xs border border-orange-400/30">React</span>
+                            <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-xs border border-orange-400/30">Node.js</span>
+                            <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-xs border border-orange-400/30">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden hover:border-orange-400/50 hover:shadow-lg hover:shadow-orange-400/10 transition-all duration-300 group">
+                    <div class="relative h-40 overflow-hidden bg-slate-700">
+                        <img src="https://picsum.photos/seed/todoapp/600/240" alt="Todo App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Todo App</h4>
+                        <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                            Vanilla JavaScript와 LocalStorage를 활용한 간단하면서도 효율적인 할일 관리 애플리케이션.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs border border-blue-400/30">JavaScript</span>
+                            <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs border border-blue-400/30">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden hover:border-orange-400/50 hover:shadow-lg hover:shadow-orange-400/10 transition-all duration-300 group">
+                    <div class="relative h-40 overflow-hidden bg-slate-700">
+                        <img src="https://picsum.photos/seed/weather/600/240" alt="Weather App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Weather App</h4>
+                        <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                            OpenWeather API를 활용한 날씨 정보 애플리케이션. 실시간 데이터 조회 및 위치 기반 서비스 제공.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-400/30">JavaScript</span>
+                            <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-400/30">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden hover:border-orange-400/50 hover:shadow-lg hover:shadow-orange-400/10 transition-all duration-300 group">
+                    <div class="relative h-40 overflow-hidden bg-slate-700">
+                        <img src="https://picsum.photos/seed/blogplatform/600/240" alt="Blog Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Blog Platform</h4>
+                        <p class="text-slate-400 mb-4 text-sm leading-relaxed">
+                            Next.js와 Firebase를 활용한 블로그 플랫폼. 마크다운 지원 및 댓글 기능 포함.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs border border-green-400/30">Next.js</span>
+                            <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs border border-green-400/30">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-16 bg-gradient-to-r from-orange-400 to-orange-600 rounded"></div>
+                <h3 class="text-4xl font-bold text-white">Skills</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Frontend -->
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-lg hover:border-orange-400/30 hover:bg-slate-800/70 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-3 h-3 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"></div>
+                        <h4 class="text-xl font-bold text-white">Frontend</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> HTML5 / CSS3
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> JavaScript (ES6+)
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> React
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> TailwindCSS
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-lg hover:border-orange-400/30 hover:bg-slate-800/70 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-3 h-3 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"></div>
+                        <h4 class="text-xl font-bold text-white">Backend</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> Node.js
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> Express
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> MongoDB
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> Firebase
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-lg hover:border-orange-400/30 hover:bg-slate-800/70 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-3 h-3 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"></div>
+                        <h4 class="text-xl font-bold text-white">Tools</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> Git / GitHub
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> VS Code
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> npm / yarn
+                        </li>
+                        <li class="text-slate-300 flex items-center gap-2">
+                            <span class="text-orange-400">▪</span> Figma
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-16 bg-gradient-to-r from-orange-400 to-orange-600 rounded"></div>
+                <h3 class="text-4xl font-bold text-white">Contact</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-lg hover:border-orange-400/30 transition-all duration-300">
+                    <h4 class="text-xl font-bold text-white mb-6">Get in Touch</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4">
+                            <span class="text-2xl">📧</span>
+                            <div>
+                                <p class="text-slate-400 text-sm">Email</p>
+                                <a href="mailto:ty85kim1@gmail.com" class="text-white hover:text-orange-400 transition-colors duration-300">ty85kim1@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="text-2xl">📱</span>
+                            <div>
+                                <p class="text-slate-400 text-sm">Phone</p>
+                                <span class="text-white">010-1234-5678</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="text-2xl">🔗</span>
+                            <div>
+                                <p class="text-slate-400 text-sm">Social</p>
+                                <a href="#" class="text-orange-400 hover:text-orange-300 transition-colors duration-300 font-semibold">GitHub &rarr;</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-lg hover:border-orange-400/30 transition-all duration-300">
+                    <h4 class="text-xl font-bold text-white mb-6">Send a Message</h4>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your name" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-400 transition-colors duration-300">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-400 transition-colors duration-300">
+                        <textarea placeholder="Your message" rows="4" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-400 transition-colors duration-300 resize-none"></textarea>
+                        <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-white text-center py-8">
+        <p class="text-slate-400">&copy; 2026 Kim Dev. All rights reserved.</p>
+        <p class="text-slate-500 text-sm mt-2">Designed with <span class="text-orange-400">❤</span> by Kim Dev</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

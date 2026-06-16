@@ -1,0 +1,176 @@
+/* Custom Animations and Styles */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(251, 146, 60, 0.5);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section animations */
+section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Card hover effect */
+.hover\:shadow-lg {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient text animation */
+.bg-clip-text {
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Button hover animations */
+button {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.4);
+}
+
+/* Link animations */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+/* Profile image animation */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.875rem;
+    }
+
+    section {
+        padding: 1.5rem 0;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(15, 23, 42);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgb(251, 146, 60), rgb(249, 115, 22));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgb(249, 115, 22), rgb(234, 88, 12));
+}
+
+/* Selection color */
+::selection {
+    background-color: rgb(251, 146, 60);
+    color: rgb(15, 23, 42);
+}
+
+/* Input focus styles */
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+}
+
+/* Navigation link active state */
+nav a.active {
+    color: rgb(251, 146, 60);
+    border-bottom: 2px solid rgb(251, 146, 60);
+}
+
+/* Smooth transitions for all elements */
+* {
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+/* Disable transitions for animations */
+*[class*="animate"] {
+    transition: none;
+}
